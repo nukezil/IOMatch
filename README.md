@@ -1,4 +1,4 @@
-# [ICCV 2023] IOMatch for Open-Set Semi-Supervised Learning
+# IOMatch for Open-Set Semi-Supervised Learning
 
 ## Introduction
 
