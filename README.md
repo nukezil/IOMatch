@@ -7,7 +7,7 @@ This is the official repository for our **ICCV 2023** paper:
 > **IOMatch: Simplifying Open-Set Semi-Supervised Learning with Joint Inliers and Outliers Utilization**</br>
 > Zekun Li, Lei Qi, Yinghuan Shi*, Yang Gao</br>
 
-[[`Paper`](Paper.pdf)] [[`Models and Logs`](https://drive.google.com/drive/folders/1pLU6tqxMls55CBRvCgZmDBfHLXm7jGMv?usp=sharing)] [[`BibTeX`](#citation)]
+[[`Paper`](https://arxiv.org/abs/2308.13168)] [[`Models and Logs`](https://drive.google.com/drive/folders/1pLU6tqxMls55CBRvCgZmDBfHLXm7jGMv?usp=sharing)] [[`BibTeX`](#citation)]
 
 ## Preparation
 
@@ -62,7 +62,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cif
 # CIFAR100, seen/unseen split of 50/50, 4 labels per seen class (CIFAR-100-200), seed = 1  
 CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cifar100_200_1.yaml
 
-# CIFAR100, seen/unseen split of 80/20, 4 labels per seen class (CIFAR-100-320),, seed = 1    
+# CIFAR100, seen/unseen split of 80/20, 4 labels per seen class (CIFAR-100-320), seed = 1    
 CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cifar100_320_1.yaml
 ```
 
@@ -72,7 +72,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cif
 
 #### CIFAR-10, seen/unseen split of 6/4, 4 labels per seen class (CIFAR-10-24)
 
-| CIFAR-10-24 | Seed=0 | Seed=1 | Seed=2 | Average | Std. |
+| CIFAR-10-24 | Seed=0 | Seed=1 | Seed=2 | Mean | Std. |
 |:-------------:|:--------:|:--------:|:--------:|:---------:|:---------:|
 | FixMatch    | 90.70  | 75.15  | 78.90  | 81.58   | 6.63 |
 | OpenMatch   | 42.05  | 48.18  | 40.67  | 43.63   | 3.26 |
@@ -80,7 +80,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cif
 
 #### CIFAR-10, seen/unseen split of 6/4, 25 labels per seen class (CIFAR-10-150)
 
-| CIFAR-10-150 | Seed=0 | Seed=1 | Seed=2 | Average | Std. |
+| CIFAR-10-150 | Seed=0 | Seed=1 | Seed=2 | Mean | Std. |
 |:-------------:|:--------:|:--------:|:--------:|:---------:|:---------:|
 | FixMatch    | 93.67  | 91.83  | 93.32  | 92.94   | 0.80 |
 | OpenMatch   | 65.00  | 64.90  | 68.90  | 66.27   | 1.86 |
@@ -88,7 +88,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cif
 
 #### CIFAR-100, seen/unseen split of 20/80, 4 labels per seen class (CIFAR-100-80)
 
-| CIFAR-100-80 | Seed=0 | Seed=1 | Seed=2 | Average | Std. |
+| CIFAR-100-80 | Seed=0 | Seed=1 | Seed=2 | Mean | Std. |
 |:-------------:|:--------:|:--------:|:--------:|:---------:|:---------:|
 | FixMatch    | 45.80  | 46.00  | 47.00  | 46.27   | 0.64 |
 | OpenMatch | 34.45 | 38.35 | 39.55 | 37.45 | 2.67 |
@@ -96,7 +96,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cif
 
 #### CIFAR-100, seen/unseen split of 20/80, 25 labels per seen class (CIFAR-100-500)
 
-| CIFAR-100-500 | Seed=0 | Seed=1 | Seed=2 | Average | Std. |
+| CIFAR-100-500 | Seed=0 | Seed=1 | Seed=2 | Mean | Std. |
 |:-------------:|:--------:|:--------:|:--------:|:---------:|:---------:|
 | FixMatch | 66.00 | 66.05 | 67.3 | 66.45 | 0.74 |
 | OpenMatch | 60.85 | 62.90 | 64.35 | 62.70 | 1.76 |
@@ -104,7 +104,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cif
 
 #### CIFAR-100, seen/unseen split of 50/50, 4 labels per seen class (CIFAR-100-200)
 
-| CIFAR-100-200 | Seed=0 | Seed=1 | Seed=2 | Average | Std. |
+| CIFAR-100-200 | Seed=0 | Seed=1 | Seed=2 | Mean | Std. |
 |:-------------:|:--------:|:--------:|:--------:|:---------:|:---------:|
 | FixMatch | 48.80 | 43.94 | 54.04 | 48.93 | 5.05 |
 | OpenMatch | 33.36 | 34.12 | 33.74 | 33.74 | 0.38 |
@@ -112,7 +112,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cif
 
 #### CIFAR-100, seen/unseen split of 50/50, 25 labels per seen class (CIFAR-100-1250)
 
-| CIFAR-100-1250 | Seed=0 | Seed=1 | Seed=2 | Average | Std. |
+| CIFAR-100-1250 | Seed=0 | Seed=1 | Seed=2 | Mean | Std. |
 |:-------------:|:--------:|:--------:|:--------:|:---------:|:---------:|
 | FixMatch | 67.82 | 68.92 | 69.58 | 68.77 | 0.89 |
 | OpenMatch | 66.44 | 66.04 | 67.1 | 66.53 | 0.54 |
@@ -120,7 +120,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cif
 
 #### CIFAR-100, seen/unseen split of 80/20, 4 labels per seen class (CIFAR-100-320)
 
-| CIFAR-100-320 | Seed=0 | Seed=1 | Seed=2 | Average | Std. |
+| CIFAR-100-320 | Seed=0 | Seed=1 | Seed=2 | Mean | Std. |
 |:-------------:|:--------:|:--------:|:--------:|:---------:|:---------:|
 | FixMatch | 44.45 | 42.36 | 42.36 | 43.06 | 1.21 |
 | OpenMatch | 29.23 | 29.18 | 27.21 | 28.54 | 1.15 |
@@ -128,7 +128,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cif
 
 #### CIFAR-100, seen/unseen split of 80/20, 25 labels per seen class (CIFAR-100-2000)
 
-| CIFAR-100-2000 | Seed=0 | Seed=1 | Seed=2 | Average | Std. |
+| CIFAR-100-2000 | Seed=0 | Seed=1 | Seed=2 | Mean | Std. |
 |:-------------:|:--------:|:--------:|:--------:|:---------:|:---------:|
 | FixMatch | 65.02 | 64.06 | 64.25 | 64.44 | 0.51 |
 | OpenMatch | 62.11 | 61.09 | 60.5 | 61.23 | 0.81 |
