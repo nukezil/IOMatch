@@ -68,7 +68,7 @@ def get_dataset(args, algorithm, dataset, num_labels, num_classes, data_dir='./d
         seed: random seed
         data_dir: data folder
     """
-    from semilearn.datasets import get_cifar, get_svhn, get_imagenet
+    from semilearn.datasets import get_cifar
     from semilearn.datasets import get_cifar_openset, get_imagenet30
     from semilearn.datasets import svhn_as_ood, lsun_as_ood, gaussian_as_ood, uniform_as_ood
     get_ood_funcs = {'svhn': svhn_as_ood, 'lsun': lsun_as_ood, 'gaussian': gaussian_as_ood, 'uniform': uniform_as_ood}
@@ -87,11 +87,6 @@ def get_dataset(args, algorithm, dataset, num_labels, num_classes, data_dir='./d
                                                                       num_classes, data_dir=data_dir)
         if eval_open:
             test_dset = {'full': eval_full_dset}
-    elif dataset == 'svhn':
-        lb_dset, ulb_dset, eval_dset = get_svhn(args, algorithm, dataset, num_labels, num_classes, data_dir=data_dir, include_lb_to_ulb=include_lb_to_ulb)
-    elif dataset == "imagenet":
-        lb_dset, ulb_dset, eval_dset = get_imagenet(args, algorithm, dataset, num_labels, num_classes, data_dir=data_dir, include_lb_to_ulb=include_lb_to_ulb)
-        test_dset = None
     else:
         raise NotImplementedError
 

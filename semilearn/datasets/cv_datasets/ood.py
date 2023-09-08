@@ -23,7 +23,7 @@ def svhn_as_ood(args, data_dir, len_per_dset=-1):
         transforms.Normalize(mean['svhn'], std['svhn'])
     ])
 
-    data_dir = os.path.join(data_dir, 'svhn')
+    data_dir = os.path.join(data_dir, 'ood_data/svhn')
     dset = torchvision.datasets.SVHN(data_dir, split='test', download=False)
     data, targets = dset.data.transpose([0, 2, 3, 1]), dset.labels  # data converted to [H, W, C] for PIL
     total_len = data.shape[0]

@@ -37,15 +37,19 @@ IOMatch
         └── cifar-10-batches-py
     └── cifar100
         └── cifar-100-python
+    └── ood_data
 ├── semilearn
     └── ...
 └── ...  
 ```
 
+The out-of-dataset testing data for extended open-set evaluation can be downloaded in [this link](https://drive.google.com/drive/folders/1IjDLYfpfsMVuzf_NmqQPoHDH0KAd94gn?usp=sharing).
+
 ## Usage
 
 We implement [IOMatch](./semilearn/algorithms/iomatch/iomatch.py) using the codebase of [USB](https://github.com/microsoft/Semi-supervised-learning).
 
+### Training
 
 Here is an example to train IOMatch on CIFAR-100 with the seen/unseen split of "50/50" and 25 labels per seen class (*i.e.*, the task <u>CIFAR-100-1250</u> with 1250 labeled samples in total). 
 
@@ -65,6 +69,10 @@ CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cif
 # CIFAR100, seen/unseen split of 80/20, 4 labels per seen class (CIFAR-100-320), seed = 1    
 CUDA_VISIBLE_DEVICES=0 python train.py --c config/openset_cv/iomatch/iomatch_cifar100_320_1.yaml
 ```
+
+### Evaluation
+
+After training, the best checkpoints will be saved in ``./saved_models``. The closed-set performance has been reported in the training logs. For the open-set evaluation, please see [``evaluation.ipynb``](./evaluate.ipynb).
 
 ## Example Results
 

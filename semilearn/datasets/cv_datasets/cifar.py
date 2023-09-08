@@ -86,7 +86,7 @@ def get_cifar(args, alg, name, num_labels, num_classes, data_dir='./data', inclu
     return lb_dset, ulb_dset, eval_dset
 
 
-def get_cifar_openset(args, alg, name, num_labels, num_classes, data_dir='./data'):
+def get_cifar_openset(args, alg, name, num_labels, num_classes, data_dir='./data', pure_unlabeled=False):
     name = name.split('_')[0]  # cifar10_openset -> cifar10
     data_dir = os.path.join(data_dir, name.lower())
     dset = getattr(torchvision.datasets, name.upper())
@@ -148,7 +148,7 @@ def get_cifar_openset(args, alg, name, num_labels, num_classes, data_dir='./data
 
     lb_dset = BasicDataset(alg, lb_data, lb_targets, num_classes, transform_weak, False, None, False)
 
-    if args.pure_unlabeled:
+    if pure_unlabeled:
         seen_indices = np.where(ulb_targets < num_classes)[0]
         ulb_data = ulb_data[seen_indices]
         ulb_targets = ulb_targets[seen_indices]
