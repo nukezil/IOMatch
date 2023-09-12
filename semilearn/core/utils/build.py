@@ -68,16 +68,12 @@ def get_dataset(args, algorithm, dataset, num_labels, num_classes, data_dir='./d
         seed: random seed
         data_dir: data folder
     """
-    from semilearn.datasets import get_cifar
     from semilearn.datasets import get_cifar_openset, get_imagenet30
     from semilearn.datasets import svhn_as_ood, lsun_as_ood, gaussian_as_ood, uniform_as_ood
     get_ood_funcs = {'svhn': svhn_as_ood, 'lsun': lsun_as_ood, 'gaussian': gaussian_as_ood, 'uniform': uniform_as_ood}
 
     test_dset = None
-    if dataset in ["cifar10", "cifar100"]:
-        lb_dset, ulb_dset, eval_dset = get_cifar(args, algorithm, dataset, num_labels, num_classes, data_dir=data_dir, include_lb_to_ulb=include_lb_to_ulb)
-        test_dset = None
-    elif dataset in ["cifar10_openset", "cifar100_openset"]:
+    if dataset in ["cifar10_openset", "cifar100_openset"]:
         lb_dset, ulb_dset, eval_dset, eval_full_dset = get_cifar_openset(args, algorithm, dataset, num_labels,
                                                                          num_classes, data_dir=data_dir)
         if eval_open:
