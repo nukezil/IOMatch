@@ -10,7 +10,7 @@ def mb_sup_loss(logits_ova, label):
     num_classes = logits_ova.size(2)
     probs_ova = F.softmax(logits_ova, 1)
     label_s_sp = torch.zeros((batch_size, num_classes)).long().to(label.device)
-    label_range = torch.arange(0, batch_size).long()
+    label_range = torch.arange(0, batch_size).long().to(label.device)
     label_s_sp[label_range[label < num_classes], label[label < num_classes]] = 1
     label_sp_neg = 1 - label_s_sp
     open_loss = torch.mean(torch.sum(-torch.log(probs_ova[:, 1, :] + 1e-8) * label_s_sp, 1))
