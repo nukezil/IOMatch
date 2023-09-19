@@ -155,6 +155,11 @@ We sincerely thank the authors of the following projects for sharing the code of
 - [T2T (ICCV'21)](https://github.com/huangjk97/T2T)
 - [OpenMatch (NeurIPS'21)](https://github.com/VisionLearningGroup/OP_Match)
 
+## License
+
+This project is licensed under the terms of the MIT License.
+See the [LICENSE](LICENSE) file for details.
+
 ## Citation
 
 ```bibtex
