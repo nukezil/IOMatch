@@ -1,7 +1,3 @@
-
-
-# Ref: https://github.com/open-mmlab/mmcv/blob/master/mmcv/runner/hooks/checkpoint.py
-
 import os
 
 from .hook import Hook

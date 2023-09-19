@@ -21,5 +21,3 @@ def get_algorithm(args, net_builder, tb_log, logger):
         return alg
     except KeyError as e:
         print(f'Unknown algorithm: {str(e)}')
-
-

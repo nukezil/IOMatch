@@ -1,7 +1,3 @@
-
-
-# from https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py
-
 import torch
 from torch import Tensor
 import torch.nn as nn

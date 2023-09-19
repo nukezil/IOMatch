@@ -4,10 +4,9 @@ import os
 import numpy as np
 from PIL import Image
 from torchvision import transforms
-from torchvision.datasets import ImageFolder
 import math
 
-from semilearn.datasets.augmentation import RandAugment, RandomResizedCropAndInterpolation, str_to_interp_mode
+from semilearn.datasets.augmentation import RandAugment, RandomResizedCropAndInterpolation
 from .datasetbase import BasicDataset
 
 mean, std = {}, {}

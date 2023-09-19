@@ -1,8 +1,6 @@
 import os
-import json
 import torchvision
 import numpy as np
-import math
 
 from torchvision import transforms
 from .datasetbase import BasicDataset

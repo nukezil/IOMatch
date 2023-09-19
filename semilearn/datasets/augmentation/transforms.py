@@ -1,7 +1,3 @@
-
-
-# Code in this file is adpated from timm
-
 import torch
 import torchvision.transforms.functional as F
 try:

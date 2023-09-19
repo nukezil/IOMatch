@@ -1,8 +1,3 @@
-
-
-# Ref: https://github.com/open-mmlab/mmcv/blob/master/mmcv/runner/hooks/hook.py
-
-
 class Hook:
     stages = ('before_run', 
               'before_train_epoch', 'before_train_step', 'after_train_step', 'after_train_epoch',

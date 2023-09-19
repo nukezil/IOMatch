@@ -1,7 +1,3 @@
-
-
-# Ref: https://github.com/open-mmlab/mmcv/blob/master/mmcv/runner/priority.py
-
 from enum import Enum
 from typing import Union
 

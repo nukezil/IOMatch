@@ -1,6 +1,3 @@
-
-
-
 from .hook import Hook
 from .checkpoint import CheckpointHook 
 from .evaluation import EvaluationHook

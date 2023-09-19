@@ -1,7 +1,3 @@
-
-
-# Ref: https://github.com/open-mmlab/mmcv/blob/master/mmcv/runner/hooks/sampler_seed.py
-
 from torch.utils.data import DataLoader
 from .hook import Hook
 from semilearn.datasets import DistributedSampler

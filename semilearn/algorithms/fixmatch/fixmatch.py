@@ -1,7 +1,3 @@
-
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
 import torch
 from semilearn.core.algorithmbase import AlgorithmBase
 from semilearn.algorithms.hooks import PseudoLabelingHook, FixedThresholdingHook

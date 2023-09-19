@@ -1,6 +1,3 @@
-
-
-
 import os
 import contextlib
 import numpy as np
@@ -458,12 +455,3 @@ class AlgorithmBase:
         Get specificed arguments into argparse for each algorithm
         """
         return {}
-
-
-class ImbAlgorithmBase(AlgorithmBase):
-    def __init__(self, args, net_builder, tb_log=None, logger=None, **kwargs):
-        super().__init__(args, net_builder, tb_log, logger, **kwargs)
-        # imbalanced arguments
-        self.lb_imb_ratio = self.args.lb_imb_ratio
-        self.ulb_imb_ratio = self.args.ulb_imb_ratio
-        self.imb_algorithm = self.args.imb_algorithm

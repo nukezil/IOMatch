@@ -1,9 +1,3 @@
-
-
-# Code in this file is adpated from rpmcruz/autoaugment
-# https://github.com/rpmcruz/autoaugment/blob/master/transformations.py
-# This code is modified version of one of ildoonet, for randaugmentation of fixmatch.
-
 import random
 
 import PIL, PIL.ImageOps, PIL.ImageEnhance, PIL.ImageDraw

@@ -1,6 +1,3 @@
-
-
-
 import torch
 
 from semilearn.core.hooks import Hook

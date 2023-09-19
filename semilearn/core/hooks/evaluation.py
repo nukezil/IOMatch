@@ -1,7 +1,3 @@
-
-
-# Ref: https://github.com/open-mmlab/mmcv/blob/master/mmcv/runner/hooks/evaluation.py
-
 import os
 from .hook import Hook
 
