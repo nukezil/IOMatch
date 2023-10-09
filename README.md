@@ -37,11 +37,17 @@ IOMatch
         └── cifar-10-batches-py
     └── cifar100
         └── cifar-100-python
+    └── imagenet30
+        └── filelist
+        └── one_class_test
+        └── one_class_train
     └── ood_data
 ├── semilearn
     └── ...
 └── ...  
 ```
+
+The data of ImageNet-30 can be downloaded in [one_class_train](https://drive.google.com/file/d/1B5c39Fc3haOPzlehzmpTLz6xLtGyKEy4/view) and [one_class_test](https://drive.google.com/file/d/13xzVuQMEhSnBRZr-YaaO08coLU2dxAUq/view).
 
 The out-of-dataset testing data for extended open-set evaluation can be downloaded in [this link](https://drive.google.com/drive/folders/1IjDLYfpfsMVuzf_NmqQPoHDH0KAd94gn?usp=sharing).
 
