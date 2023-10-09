@@ -7,7 +7,7 @@ This is the official repository for our **ICCV 2023** paper:
 > **IOMatch: Simplifying Open-Set Semi-Supervised Learning with Joint Inliers and Outliers Utilization**</br>
 > Zekun Li, Lei Qi, Yinghuan Shi*, Yang Gao</br>
 
-[[`Paper`](https://arxiv.org/abs/2308.13168)] [[`Models and Logs`](https://drive.google.com/drive/folders/1pLU6tqxMls55CBRvCgZmDBfHLXm7jGMv?usp=sharing)] [[`BibTeX`](#citation)]
+[[`Paper`](https://arxiv.org/abs/2308.13168)] [[`Poster`]](./pubs/Poster.pdf) [[`Slides`]](./pubs/Slides.pdf) [[`Models and Logs`](https://drive.google.com/drive/folders/1pLU6tqxMls55CBRvCgZmDBfHLXm7jGMv?usp=sharing)] [[`BibTeX`](#citation)]
 
 ## Preparation
 
